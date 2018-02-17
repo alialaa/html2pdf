@@ -189,6 +189,9 @@ html2pdf.makePDF = function(canvas, pageSize, opt) {
   }
 
   // Finish the PDF.
+  if(opt.returnContent) {
+    return pdf.output('datauristring');
+  }
   pdf.save( opt.filename );
 }
 
