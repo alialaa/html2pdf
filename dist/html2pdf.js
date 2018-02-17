@@ -368,13 +368,13 @@ html2pdf.makePDF = function (canvas, pageSize, opt) {
     }
   }
 
+  if(opt.returnContent) {
+    return pdf.output('datauristring');
+  }
   // Finish the PDF.
   pdf.save(opt.filename);
 };
 
-if(opt.returnContent) {
-  return pdf.output('datauristring');
-}
 
 return html2pdf;
 
